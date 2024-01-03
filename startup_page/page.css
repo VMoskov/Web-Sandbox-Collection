@@ -1,0 +1,68 @@
+body {
+    background-color: RGB(4, 20, 44);
+    margin: 0;
+    padding-top: 4vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 2vh;
+    color: white;
+    font-family: "Sansita", sans-serif;
+    gap: 100px;
+    border: 80px solid RGB(92, 187, 191);
+    border-top: 0;
+}
+
+.flex-item {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 35vh;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+input {
+    font-size: 1rem;
+    /*border-radius: 5px;*/
+    border: 1px solid black;
+    padding: 10px;
+    width: 92%;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+form > div {
+    width: 60%;
+}
+
+#submit {
+    background-color: RGB(242, 174, 65);
+    border: none;
+    color: RGB(4, 20, 44);
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 40%;
+    height: 15vh;
+}
