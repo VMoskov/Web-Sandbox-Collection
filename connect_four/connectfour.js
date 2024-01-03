@@ -1,4 +1,5 @@
 const colorNames = ["", "blue", "red"];
+let boardLocked = false;
 
 let player1 = prompt("Player 1: Enter your name, you will be Blue");
 let player2 = prompt("Player 2: Enter your name, you will be Red");
@@ -91,6 +92,10 @@ function checkWin() {
 }
 
 $("td").click(function() {
+    if(boardLocked) {
+        alert("The game is over! Refresh your browser to play again!");
+        return;
+    }
     let [row, col] = $(this).attr("id").split("");
     let bottom = checkBottom(col);
     if(bottom === undefined) {
@@ -100,6 +105,7 @@ $("td").click(function() {
     changeColor(bottom, col, colors[currentColor], () => {
 
         if (checkWin()) {
+            boardLocked = true;
             alert(`${currentName} has won! Refresh your browser to play again!`);
         }
 
